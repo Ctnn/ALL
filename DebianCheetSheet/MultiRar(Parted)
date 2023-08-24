@@ -1,0 +1,4 @@
+Eğer parçalanmış birden fazla rar dosyası varsa bunları aynı anda çıkartıp birleştirmek
+için aşağıdaki kodu kullan.
+
+find ./ -name "*.zip.*" | sort -V | xargs cat > full.zip

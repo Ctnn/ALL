@@ -1,0 +1,3 @@
+ls -ltrh /dev/video*
+
+Listele sonrasında tak-çıkar extrayı bul ve id'yi al

@@ -1,0 +1,44 @@
+Evet, doğru. Anaconda, Python 3.6 için desteğini sonlandırdı ve artık Python 3.6'yı `conda` aracılığıyla kuramazsınız. Ancak, Python 3.6'yı `pyenv` aracılığıyla kurabilir ve sanal ortamlar oluşturabilirsiniz.
+
+`pyenv`'i kurmak için aşağıdaki adımları izleyebilirsiniz:
+
+1. Öncelikle, `pyenv`'in bağımlılıklarını kurun:
+
+sudo apt update
+sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+
+2. Daha sonra, `pyenv`'i GitHub'dan indirin ve kurun:
+
+curl https://pyenv.run | bash
+
+3. Kurulum tamamlandıktan sonra, `pyenv`'in yolunu `PATH` ortam değişkenine ekleyin. Bunu yapmak için, `~/.bashrc` dosyasını bir metin düzenleyicisi ile açın ve aşağıdaki satırları dosyanın sonuna ekleyin:
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+4. Daha sonra, değişikliklerin etkili olması için terminali kapatıp yeniden açın veya aşağıdaki komutu çalıştırın:
+
+source ~/.bashrc
+
+
+Bu işlemlerden sonra, `pyenv` aracılığıyla Python 3.6'yı kurabilirsiniz:
+
+pyenv install 3.6.15
+
+
+Python 3.6'yı kurduktan sonra, Python 3.6'yı kullanarak bir sanal ortam oluşturabilirsiniz:
+
+pyenv virtualenv 3.6.15 my-virtual-env-3.6.15
+
+
+Sanal ortamı etkinleştirmek için aşağıdaki komutu kullanabilirsiniz:
+
+pyenv activate my-virtual-env-3.6.15
+
+
+Sanal ortamdan çıkmak için ise aşağıdaki komutu kullanabilirsiniz:
+
+pyenv deactivate

@@ -1,0 +1,3 @@
+/home/firefly/Desktop/LightTrack/build/CMakeFiles/LightTrack.dir
+/home/firefly/Desktop/LightTrack/build/CMakeFiles/edit_cache.dir
+/home/firefly/Desktop/LightTrack/build/CMakeFiles/rebuild_cache.dir
